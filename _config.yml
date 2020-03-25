@@ -30,6 +30,11 @@ plugins:
   
 google_analytics: UA-2646305-3
 
+show_excerpts: false # set to true to show excerpts on the homepage, which is a spoil of first line of the post
+
+# Set this to a github repository to be used to host comments.
+#github_comments_repository:  dc25/myBlog-comments
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
