@@ -41,7 +41,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - assets/
+#  - assets/
 
 # The URL for the staticman API bridge endpoint
 # You will want to modify some of the values:

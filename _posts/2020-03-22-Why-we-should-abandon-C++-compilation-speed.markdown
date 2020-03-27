@@ -3,7 +3,7 @@ layout: post
 title:  "Why we should abandon C++: compilation speed"
 date:   2020-03-22 20:37:00 +0100
 categories: C++
-github_comments_issueid: 
+comments: true
 ---
 Welcome to my new blog about programming, I want to start it with a collection of posts about major issues of C++.
 My goal isn't to clash this language that I use professionaly since 12 years, but to stay objective while having eyes wide open on other things that exists.
