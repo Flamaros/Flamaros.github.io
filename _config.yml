@@ -42,3 +42,22 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - assets/
+
+# The URL for the staticman API bridge endpoint
+# You will want to modify some of the values:
+#  ${github-username}: the username of the account with which you publish your blog
+#  ${blog-repo}: the name of your blog repository in github
+#  master: this the branch out of which your blog is published, often master or gh-pages
+#  ${bridge_app_name}: the name you chose in Heroku for your bridge API
+#  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
+#
+# for me, this line reads:
+# https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
+staticman_url: https://flamaros-staticman.herokuapp.com/v2/entry/Flamaros/Flamaros.github.io/master/comments
+
+# reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
+# I personally don't think the secret needs to be included in the generated site, but the staticman API bridge uses
+# it to ensure the site configuration and bridge configuration match (but why not just compare the site key?)
+reCaptcha:
+  siteKey: 6LdideQUAAAAACVZBHo1FFGeOGpW_kKw69o4d3s2
+  secret: L4dXxtuz8RMRp9T902iMt/5OXjegt0P3+b2mrOmq0xxUfGg+xx8XU1DGlD7nxwpG9JUG/++X6V2Loeh06P6W3gxezoZKFPk5b6kLRZUQd1n5wK1x5GsSAr6eBkgUDeqx8lAu3/TJkDVoB+8NmNIFdFt9LieGDWL/epWMP1YgODPgvWuFFhYNS0eZHPXtFTSzf7Gd9wF4iYBkydWdqvMBbKyiR0ZpiJyFDSuWcLd1pr/+sc0ppL0Aw0u1MHL4A/gFEqwBPIgoqepyc0yadoBj7oZikV8doXK9DebUXORiHzyWuFMXXsV5uW7giCM5qIeKDypeeGrPeusQF5KqZjyELfpgFw9qsxFmlja6cbNipwlouApgK04i/CeMVa49eS2gOsXZUZQ8gTI2IUK2dsoyRbDLaa0li/MF3OSM4qDsPK4IRvh856sGQidh/1BbeMCiTQwz5dk/M6HfCCYE6c+7S3k6QhpfhmsiEJwlPgCuJJEEM6Vax9qnxhh46m8gYBMpWKzEruWV6oAvJgoJMdrYm+EPQCB6TYemIsKQioW68WTfUR/T4XrPxO/fkfQlrTwL1C69eIlHBI3ue004L2P1ZB+njoDoMlM/Sz955VtNwZ91SPi1TN3oTDoJZOnJJiquivF/780HMygG/sAhC6n1fringnatRv8XBBzhkJy4IBI=
