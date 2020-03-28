@@ -46,7 +46,8 @@ On my personal project [f-lang], I recently rewrite a part of my code to remove 
 compilation time has dropped from 7 seconds to less than 4 for a code that has more features. 4 seconds is still an
 infinite amount of time to build an application that have just 5,000 lines of codes (including comments and empty
 lines). Just take a look at what somes game can display today. How can we imagine that it's so complicated to analyse
-text files and generate a binary? You should compare this number to what was [D1] capable of, about 400,000 lines per second. And [Jonathan Blow] targets 1,000,000 with his language [jai].
+text files and generate a binary? You should compare this number to what was [D1] capable of, about 400,000 lines per
+second. And [Jonathan Blow] targets 1,000,000 with his language [jai].
 
 [C#]: http://csharp.net/
 [Java]: https://www.java.com/en/
