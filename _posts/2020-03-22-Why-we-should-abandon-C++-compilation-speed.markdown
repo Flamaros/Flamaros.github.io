@@ -5,14 +5,14 @@ date:   2020-03-22 20:37:00 +0100
 categories: C++
 comments: true
 ---
-Welcome to my new blog about programming, I want to start it with a collection of posts about major issues of C++.
+Welcome to my new blog about programming, I want to start it with a collection of posts about major issues of [C++].
 My goal isn't to clash this language that I use professionaly since 12 years, but to stay objective while having eyes wide open on other things that exists.
 
 The compilation speed is not a direct issue, but a consequence of some root design errors.
 
 ## Why this is so important?
 If you decide to take a system programming language this is certainly because you are targetting to get the maximum performances of the hardware on which
-your software will run. You'll certainly not choose the C++ that is known to be old and complicated if the performances aren't in your top priorities, some other
+your software will run. You'll certainly not choose the [C++] that is known to be old and complicated if the performances aren't in your top priorities, some other
 language with a more general purpose are simple to use and offer decent performances like [C#] or [Java]. There is also some other new language like [Rust] or [Go] with
 a maybe little more restricted scope of usages.
 
@@ -23,7 +23,7 @@ The second and main raison of why the compilation time is something critical is 
 developers use particular patterns and techniques to get a good level of productivity. They prefer to limit themselves on features that they can use to avoid
 falling in situations where compilations can take literally hours to build an application (sometime with less than 2 millions of lines of code).
 Using idioms like [PIMPL] and others techniques that also impact the quality of generated code is something we should not tolerate in my opinion.
-If you aren't familiar with kind of techniques that help C++ developer to keep compilation time do reasonable amout of time, you can read this post about [physical design].
+If you aren't familiar with kind of techniques that help [C++] developer to keep compilation time do reasonable amout of time, you can read this post about [physical design].
 
 ## How C++ can improve the situation
 C++20 modules feature should improve the situation significantly, but sadly it will request a major effort to enable it on existing projects.
@@ -32,7 +32,7 @@ to give multiple source files to the compiler directly which will give a result 
 because it also improve the quality of generated code, but sadly compilers tends to consumme a lot of RAM and out of memory crash are frequent.
 
 ## Advices
-It a very good thing to start a new C++ project with compilation speed in mind, use the most simple techniques like [forward declaration], take care of not creating
+It a very good thing to start a new [C++] project with compilation speed in mind, use the most simple techniques like [forward declaration], take care of not creating
 source files for to few lines of code, be particularly cautious with templates and meta-programmation, initililization list (and other to modern features),...
 
 On my personnal project [f-lang], I recently rewrite a part of my code to remove all dependencies to the STL, and my compilation time has dropped from 7 seconds to less than 4
@@ -55,3 +55,4 @@ You should compare this number to those the first version of [D] also called [D1
 [D1]: https://digitalmars.com/d/1.0/index.html
 [jai]: https://inductive.no/jai/
 [Jonathan Blow]: https://en.wikipedia.org/wiki/Jonathan_Blow
+[C++]: https://isocpp.org/
