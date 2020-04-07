@@ -49,6 +49,9 @@ lines). Just take a look at what some games can display today. How can we imagin
 text files and generate a binary? You should compare this number to what [D1] was capable of, about 400,000 lines per
 second. And [Jonathan Blow] targets 1,000,000 with his [jai] language.
 
+## Last word
+I recently find a good [presentation] of all techniques that can be used to reduce the compilation time.
+
 [C#]: http://csharp.net/
 [Java]: https://www.java.com/en/
 [Rust]: https://www.rust-lang.org/
@@ -65,3 +68,4 @@ second. And [Jonathan Blow] targets 1,000,000 with his [jai] language.
 [Jonathan Blow]: https://en.wikipedia.org/wiki/Jonathan_Blow
 [C++]: https://isocpp.org/
 [C++20 modules]: https://isocpp.org/files/papers/p1103r2.pdf
+[presentation]: https://fr.slideshare.net/corehard_by/the-hitchhikers-guide-to-faster-builds-viktor-kirilov-corehard-spring-2019
