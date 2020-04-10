@@ -43,6 +43,11 @@ exclude:
   - vendor/ruby/
 #  - assets/
 
+
+### COMMENTS
+# I followed the tutorial https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html to enable comments on my
+# blog posts.
+
 # The URL for the staticman API bridge endpoint
 # You will want to modify some of the values:
 #  ${github-username}: the username of the account with which you publish your blog
