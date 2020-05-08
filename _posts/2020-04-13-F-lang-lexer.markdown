@@ -80,6 +80,7 @@ main :: (arguments : [] string) -> i32
 ```
 
 ![](/assets/images/F-lang-lexer_tokens.png)
+
 The numbers at start of each lines are the line number and the column of the token.
 
 With this result you can see almost all the data that I store in the Token struct, there is only few things like the
