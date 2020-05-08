@@ -1,12 +1,49 @@
 /**
  * Syntax highlighting styles
  */
+pre.highlight {
+  padding: 0px;
+}
+ 
 .highlight {
   background: #fff;
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
     background: #eef;
+  }
+  
+  table.rouge-table {
+	margin: 0px;
+	border: 0px;
+	border-spacing: 0px;
+	white-space: normal;
+  }
+  
+  td.rouge-gutter {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-right: 1px solid;
+	border-spacing: 0px;
+	
+	pre.lineno {
+	  margin: 0px;
+	  border: 0px;
+	  padding-right: 0px;
+	}
+  }
+  
+  td.rouge-code {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-spacing: 0px;
+	
+	pre {
+	  margin: 0px;
+	  border: 0px;
+	}
   }
 
   .c     { color: #998; font-style: italic } // Comment

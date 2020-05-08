@@ -24,6 +24,11 @@ github_username:  Flamaros
 
 # Build settings
 markdown: kramdown
+kramdown:
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+
 theme: minima
 plugins:
   - jekyll-feed

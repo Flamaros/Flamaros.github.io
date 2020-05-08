@@ -61,6 +61,7 @@ greatly how this design allow more optimizations. For [f-lang] I am not so conce
 tweeks, even more for the lexer. I can only recommand you to listen this great technical conversation about compilers
 and speed.
 
+Here is an exemple of code that can be lexed followed by the resulting list of tokens:
 ```c
 alias DWORD = ui32;
 alias HANDLE = *void;
@@ -78,7 +79,8 @@ main :: (arguments : [] string) -> i32
 }
 ```
 
-![tokens](/assets/images/F-lang-lexer_tokens.png)!
+![](/assets/images/F-lang-lexer_tokens.png)
+The numbers at start of each lines are the line number and the column of the token.
 
 [Crafting Interpreters]: https://craftinginterpreters.com/
 [compiler definition]: https://en.wikipedia.org/wiki/Compiler
