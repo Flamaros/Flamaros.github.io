@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "F-lang: Lexer"
-date:   2020-04-04 15:00:00 +0100
+date:   2020-05-08 15:00:00 +0100
 categories: f-lang
 comments: true
 ---
@@ -81,6 +81,14 @@ main :: (arguments : [] string) -> i32
 
 ![](/assets/images/F-lang-lexer_tokens.png)
 The numbers at start of each lines are the line number and the column of the token.
+
+With this result you can see almost all the data that I store in the Token struct, there is only few things like the
+line number and type flags. All of that is straight forward, I didn't mention an obvious point that is a token doesn't
+have to store the reference text as string. I simply use a view (pointer and size) on the file buffer that stay in
+memory during the whole execution time of the compiler.
+
+The next article should be about the parser, that works in a similar way with a stream, but his output is a bit more
+complicated data structure.
 
 [Crafting Interpreters]: https://craftinginterpreters.com/
 [compiler definition]: https://en.wikipedia.org/wiki/Compiler
