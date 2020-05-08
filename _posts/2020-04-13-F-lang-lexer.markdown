@@ -61,7 +61,7 @@ greatly how this design allow more optimizations. For [f-lang] I am not so conce
 tweeks, even more for the lexer. I can only recommand you to listen this great technical conversation about compilers
 and speed.
 
-```
+```c
 alias DWORD = ui32;
 alias HANDLE = *void;
 
@@ -78,76 +78,7 @@ main :: (arguments : [] string) -> i32
 }
 ```
 
-```
---- tokens list of: .\compiler-f\main.f ---
-1, 1 - KEYWORD: alias
-1, 7 - IDENTIFIER: DWORD
-1, 13 - SYNTAXE_OPERATOR: =
-1, 15 - KEYWORD: ui32
-1, 19 - SYNTAXE_OPERATOR: ;
-2, 1 - KEYWORD: alias
-2, 7 - IDENTIFIER: HANDLE
-2, 14 - SYNTAXE_OPERATOR: =
-2, 16 - SYNTAXE_OPERATOR: *
-2, 17 - KEYWORD: void
-2, 21 - SYNTAXE_OPERATOR: ;
-4, 1 - IDENTIFIER: main
-4, 6 - SYNTAXE_OPERATOR: ::
-4, 9 - SYNTAXE_OPERATOR: (
-4, 10 - IDENTIFIER: arguments
-4, 20 - SYNTAXE_OPERATOR: :
-4, 22 - SYNTAXE_OPERATOR: [
-4, 23 - SYNTAXE_OPERATOR: ]
-4, 25 - KEYWORD: string
-4, 31 - SYNTAXE_OPERATOR: )
-4, 33 - SYNTAXE_OPERATOR: ->
-4, 36 - KEYWORD: i32
-5, 1 - SYNTAXE_OPERATOR: {
-6, 5 - IDENTIFIER: message
-6, 12 - SYNTAXE_OPERATOR: :
-6, 21 - KEYWORD: string
-6, 29 - SYNTAXE_OPERATOR: =
-6, 31 - STRING_LITERAL: "Hello World"
-6, 44 - SYNTAXE_OPERATOR: ;
-7, 5 - IDENTIFIER: written_bytes
-7, 18 - SYNTAXE_OPERATOR: :
-7, 21 - IDENTIFIER: DWORD
-7, 29 - SYNTAXE_OPERATOR: =
-7, 31 - NUMERIC_LITERAL_I32: 0
-7, 32 - SYNTAXE_OPERATOR: ;
-8, 5 - IDENTIFIER: hstdOut
-8, 12 - SYNTAXE_OPERATOR: :
-8, 21 - IDENTIFIER: HANDLE
-8, 29 - SYNTAXE_OPERATOR: =
-8, 31 - IDENTIFIER: GetstdHandle
-8, 43 - SYNTAXE_OPERATOR: (
-8, 44 - IDENTIFIER: STD_OUTPUT_HANDLE
-8, 61 - SYNTAXE_OPERATOR: )
-8, 62 - SYNTAXE_OPERATOR: ;
-10, 5 - IDENTIFIER: WriteFile
-10, 14 - SYNTAXE_OPERATOR: (
-10, 15 - IDENTIFIER: hstdOut
-10, 22 - SYNTAXE_OPERATOR: ,
-10, 24 - IDENTIFIER: message
-10, 31 - SYNTAXE_OPERATOR: .
-10, 32 - IDENTIFIER: c_string
-10, 40 - SYNTAXE_OPERATOR: ,
-10, 42 - IDENTIFIER: message
-10, 49 - SYNTAXE_OPERATOR: .
-10, 50 - IDENTIFIER: length
-10, 56 - SYNTAXE_OPERATOR: ,
-10, 58 - SYNTAXE_OPERATOR: &
-10, 59 - IDENTIFIER: bytes
-10, 64 - SYNTAXE_OPERATOR: ,
-10, 66 - NUMERIC_LITERAL_I32: 0
-10, 67 - SYNTAXE_OPERATOR: )
-10, 68 - SYNTAXE_OPERATOR: ;
-13, 5 - KEYWORD: return
-13, 12 - NUMERIC_LITERAL_I32: 0
-13, 13 - SYNTAXE_OPERATOR: ;
-14, 1 - SYNTAXE_OPERATOR: }
----
-```
+![tokens](/assets/images/F-lang-lexer_tokens.png)!
 
 [Crafting Interpreters]: https://craftinginterpreters.com/
 [compiler definition]: https://en.wikipedia.org/wiki/Compiler
