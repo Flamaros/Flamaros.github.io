@@ -3,7 +3,7 @@ layout: post
 title:  "This blog"
 date:   2020-05-10 10:00:00 +0100
 categories: blog
-comments: true
+comments: false
 ---
 I started a blog few month ago, but after few posts I wasn't really satified by [Wordpress], this is why I use this one
 now. [DEV-BOX] also have the difference to be redacted in french.
