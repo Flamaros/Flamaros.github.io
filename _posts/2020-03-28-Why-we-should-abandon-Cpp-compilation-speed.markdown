@@ -15,7 +15,7 @@ The compilation speed is not a direct issue, but a consequence of some root desi
 If you decide to use a system programming language, it is certainly because you are aiming to get the maximum
 performances of the hardware your software will run on. Otherwise you'll certainly not choose [C++] that is known to be
 old and complicated. If performances aren't in your top priorities, some other languages with a more general purpose
-like [C#] or [Java] are simple to use and offer a decent level of performance. There are also some other new languages
+like [C#] or [Java] are simpler to use and offer a decent level of performance. There are also some other new languages
 like [Rust] or [Go] that may have more restricted scopes.
 
 So it seems natural for me to expect that [C++] compilers that are developed in this language show its capacities in

@@ -42,6 +42,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - TODO.txt
+  - drafts/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

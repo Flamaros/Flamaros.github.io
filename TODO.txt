@@ -1,1 +1,4 @@
-bundle exec jekyll serve
+Start the local server:
+  - bundle exec jekyll serve
+
+Fix links on all posts, syntaxe is [link name][reference]. See generating exe file post.
