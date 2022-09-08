@@ -5,12 +5,12 @@ date:   2020-05-10 10:00:00 +0100
 categories: blog
 comments: false
 ---
-I started a blog few month ago, but after few posts I wasn't really satified by [Wordpress], this is why I use this one
-now. [DEV-BOX] also have the difference to be redacted in french.
+I started a blog few month ago, but after few posts I wasn't really satified by [Wordpress][1], this is why I use this one
+now. [DEV-BOX][2] also have the difference to be redacted in french.
 
 I will not detail all of my motivations behind the blog migration, because I do not think it is very interesting. I
 hope that you would appreciate being there.
 
 
-[Wordpress]: https://wordpress.org/
-[DEV-BOX]: https://flamarosdevbox.wordpress.com
+[1]: https://wordpress.org/
+[2]: https://flamarosdevbox.wordpress.com

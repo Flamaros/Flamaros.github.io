@@ -9,13 +9,13 @@ comments: true
 There is already a lot of sources that explain how compilers are working, so I will not repeat basics in my series of
 posts about the development of my language f-lang. Instead I prefer to share my experiences, on what it is working and
 what it is not. So I'll assume that you already have a good view of different passes that generally compose a compiler.
-If not I can only recommend you to start with the [compiler definition] on Wikipedia, after that to go more in details
-there is this good free book: [Crafting Interpreters]. I read only the first chapters at the moment so I can't judge
+If not I can only recommend you to start with the [compiler definition][1] on Wikipedia, after that to go more in details
+there is this good free book: [Crafting Interpreters][2]. I read only the first chapters at the moment so I can't judge
 for the quality and interest of all his content, but I already learned some things from it, and I like the writing
 style.
 
 ### Organization
-As I work on [f-lang] on my free time, I have to stay motivated. That why I will do things in the order I will felt
+As I work on [f-lang][3] on my free time, I have to stay motivated. That why I will do things in the order I will felt
 motivated instead of constrain my self to make things in the most productive or critical way. Generally I like
 to make things working before well structured. In that way there is few frictions with the first versions of code I
 write which allows me to refine the code quickly throw multiple iterations. I try to put my focus on the
@@ -25,13 +25,13 @@ I have absolutely no experience in writing compilers when starting this project,
 how we are learning. I just have to take care of being able to fix my errors. In my C++ version of the compiler I put a
 lot of comments for my self to remind me how I could write things in a better way with f-lang. This will guide me on
 which and how to implement features in my programming language. Remember I don't use the STL nor some C++ features to
-restrict myself in a subset of C++ features that will be similar in [f-lang].
+restrict myself in a subset of C++ features that will be similar in [f-lang][3].
 
 ## Lexer
-I made a [lexer] a few month ago for a professional project, before that I think it was at school the last time I did
+I made a [lexer][4] a few month ago for a professional project, before that I think it was at school the last time I did
 one. The lexer I did for my previous company was made to "parse" C++ headers, precisely DirectX headers. I put parse
-into quotes because the job of the tool was so simple that it wasn't necessary to build an [AST]. The latest
-version of this lexer was capable to generate all [tokens] for more than 300,000 lines of code in only 50ms and
+into quotes because the job of the tool was so simple that it wasn't necessary to build an [AST][5]. The latest
+version of this lexer was capable to generate all [tokens][6] for more than 300,000 lines of code in only 50ms and
 sincerely I think it is slow. My first attempt was running in a couple of seconds, but I was able to improve
 performances really quickly. The first thing I did was to pre-allocate tokens, by using a heuristic based on
 the file size, I simply considered that the average size of tokens is 5 characters. The second things I did was to use
@@ -43,8 +43,8 @@ hash table for keywords. As I didn't do much effort I think that it is possible 
 look at cache-misses and branch miss-prediction issues nor at parallelization possibilities.
 
 Actually I found a "major" issue, the code design of this lexer is based on a stack of states that makes the code hard
-to maintain. Small changes can have a huge impact on parts that already works, hopefully a [lexer] is still something
-really simple. Nevertheless for the [f-lang] I wrote a lexer in a different way, I don't use a stack of states instead
+to maintain. Small changes can have a huge impact on parts that already works, hopefully a [lexer][4] is still something
+really simple. Nevertheless for the [f-lang][3] I wrote a lexer in a different way, I don't use a stack of states instead
 I use a stream and when I am in a specific state I process it completely. The stream allow to consume characters from
 everywhere. For example if the lexer found a digit character when starting a new token (just after a punctuation) it
 will enter in a section that lex numeric literals, which can iterate throw the characters stream in the way it wants.
@@ -52,15 +52,15 @@ This approach let some parts of code reading in advance some characters without 
 available for next token. I don't really know how this design change impact the performances, but it should be close
 from the previous one (maybe faster, maybe slower).
 
-The [lexer] of [f-lang] is or will be a bit more complicated than the previous one I did few months ago because it have
+The [lexer][4] of [f-lang][3] is or will be a bit more complicated than the previous one I did few months ago because it have
 a more generic purpose. The interpretation of string or numeric literals is more advanced, and actually I still haven't
 added everything I want for this part of the language. I also think that the new design make the usage of hash tables
 for punctuation useless (and may slow down the code), so I will probably remove them.
 
 I changed the way of how I write lexers simply for comfort and maintainability of the code, this design seems to be the
-most used, I saw it in the sources of many compilers. But I was surprised to listen [Sean Barrett] in a [discussion]
-with [Jonathan Blow] whom seems to use a lexer with a design closer than the first one I made. [Sean Barrett] explains
-greatly how this design allow more optimizations. For [f-lang] I am not so concerned by such advanced performances
+most used, I saw it in the sources of many compilers. But I was surprised to listen [tokens][7] in a [discussion][8]
+with [Jonathan Blow][9] whom seems to use a lexer with a design closer than the first one I made. [tokens][7] explains
+greatly how this design allow more optimizations. For [f-lang][3] I am not so concerned by such advanced performances
 tweaks, even more for the lexer. I can only recommend you to listen this great technical conversation about compilers
 and speed.
 
@@ -94,12 +94,12 @@ memory during the whole execution time of the compiler.
 The next article should be about the parser, that works in a similar way with a stream, but its output is a bit more
 complicated data structure.
 
-[Crafting Interpreters]: https://craftinginterpreters.com/
-[compiler definition]: https://en.wikipedia.org/wiki/Compiler
-[f-lang]: https://github.com/Flamaros/f-lang
-[lexer]: https://en.wikipedia.org/wiki/Lexical_analysis
-[tokens]: https://en.wikipedia.org/wiki/Lexical_analysis#Token
-[discussion]: https://www.youtube.com/watch?reload=9&v=rq1DRuB9p7w
-[Sean Barrett]: https://nothings.org
-[Jonathan Blow]: https://en.wikipedia.org/wiki/Jonathan_Blow
-[AST]: https://en.wikipedia.org/wiki/Abstract_syntax_tree
+[1]: https://en.wikipedia.org/wiki/Compiler
+[2]: https://craftinginterpreters.com/
+[3]: https://github.com/Flamaros/f-lang
+[4]: https://en.wikipedia.org/wiki/Lexical_analysis
+[5]: https://en.wikipedia.org/wiki/Abstract_syntax_tree
+[6]: https://en.wikipedia.org/wiki/Lexical_analysis#Token
+[7]: https://nothings.org
+[8]: https://www.youtube.com/watch?reload=9&v=rq1DRuB9p7w
+[9]: https://en.wikipedia.org/wiki/Jonathan_Blow
