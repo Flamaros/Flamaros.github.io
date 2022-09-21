@@ -28,7 +28,7 @@ productivity. They prefer to limit themselves on features that they can use to a
 it can take literally hours to build an application (sometimes with less than 2 millions of lines of code).
 Using idioms like [PIMPL][6] and other techniques that also impact the quality of generated code are bad options in my
 opinion. If you aren't familiar with any kind of techniques that help [C++][1] developers keep compilation times at
-reasonable amounts of time, you can read this post about [physical design][7].
+reasonable amounts of time, you can read this post about [physical design][16] (this link is a copy of the original [post][7] from Our Machinery [website][17] which is now dead).
 
 ## How can C++ improve the situation
 The feature of [C++20 modules][8] should improve the situation significantly, but sadly it will request a major effort to
@@ -67,3 +67,5 @@ I recently find a good [presentation][15] of all techniques that can be used to 
 [13]: https://en.wikipedia.org/wiki/Jonathan_Blow
 [14]: https://inductive.no/jai/
 [15]: https://fr.slideshare.net/corehard_by/the-hitchhikers-guide-to-faster-builds-viktor-kirilov-corehard-spring-2019
+[16]: https://www.gamedeveloper.com/programming/physical-design-of-the-machinery
+[17]: https://ourmachinery.com/
